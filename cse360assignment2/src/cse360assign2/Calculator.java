@@ -7,6 +7,7 @@
 
 package cse360assign2;
 
+
 /**
  * @author nayanarora
  * The public class calculator has 7 methods to implement the working of a normal calculator. 
@@ -16,6 +17,7 @@ package cse360assign2;
 public class Calculator {
 
 	private int total;
+	String trackHistory = "0"; // variable declaration to track history of operation and value.
 	
 	public Calculator () 
 	{
@@ -38,6 +40,7 @@ public class Calculator {
 	public void add (int value) 
 	{
 		total = total + value;
+		trackHistory = trackHistory + " + " + value;
 	}
 	
 	/**
@@ -47,7 +50,7 @@ public class Calculator {
 	public void subtract (int value) 
 	{
 		total = total - value;
-		
+		trackHistory = trackHistory + " - " + value;
 	}
 	
 	/**
@@ -57,6 +60,7 @@ public class Calculator {
 	public void multiply (int value)
 	{
 		total = total * value;
+		trackHistory = trackHistory + " * " + value;
 	}
 	
 	/**
@@ -71,6 +75,7 @@ public class Calculator {
 		}
 		
 		total = total / value;
+		trackHistory = trackHistory + " / " + value;
 	}
 	
 	/**
@@ -79,6 +84,25 @@ public class Calculator {
 	 */
 	public String getHistory () 
 	{
-		return "";
+		return trackHistory;
 	}
 }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
